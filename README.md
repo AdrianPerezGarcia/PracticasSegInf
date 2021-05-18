@@ -20,11 +20,11 @@ Se incluyen implementaciones para:
 
 ## Uso
 
-Las 5 primeras implementaciones pueden verse directamente en github junto a los resultados ya que son notebooks de Jupyter mientras que para las dos últimas es necesario un compilador Python.
+Las 5 primeras implementaciones pueden verse directamente en GitHub junto a los resultados ya que son notebooks de Jupyter ejecutados mientras que para las dos últimas es necesario un compilador Python.
 
 ## Tecnologías
 
-Se ha utilizado Python 3.8 como único lenguaje de programación tanto en Jupyter Notebook como en PyCharm.
+Se ha utilizado Python como único lenguaje de programación en su versión 3.8 tanto en Jupyter Notebook como en PyCharm.
 
 ##
 <p align="center">
