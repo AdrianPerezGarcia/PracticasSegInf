@@ -2,11 +2,11 @@ from math import log
 from math import floor
 
 # 1 = Si, 0 = No.
-debugMode = 0
+debugMode = 1
 
 
 def debug(text):
-    if debugMode == 0:
+    if debugMode == 1:
         print(text)
 
 
@@ -144,7 +144,6 @@ def extendKey(key, extendedLength, alphabet):
     # Se marcan los coeficientes de la ecuacion y se añade la clave original a la extendida.
     for element in key:
         equationCoefficients.append(alphabet.index(element))
-        extendedKey += element
         extendedKeyNumeric.append(alphabet.index(element))
 
     # Se van calculando iterativamente todas las nuevas posiciones de la clave extendida usando la ecuacion.
@@ -154,8 +153,12 @@ def extendKey(key, extendedLength, alphabet):
         for j in range(len(equationCoefficients)):
             newKey += (baseCalculator[j] * extendedKeyNumeric[j])
         extendedKeyNumeric.append(newKey % mod)
-        extendedKey += alphabet[extendedKeyNumeric[i]]
 
+    extendedKey = ''
+    for element in extendedKeyNumeric:
+        extendedKey += alphabet[element]
+
+    debug('Clave extendida numerica: \'' + str(extendedKeyNumeric) + '\'')
     debug('Clave extendida: \'' + str(extendedKey) + '\'')
     return extendedKeyNumeric
 
